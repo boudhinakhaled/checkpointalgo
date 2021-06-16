@@ -1,0 +1,31 @@
+ALGORITHM checkopoint_08
+VAR
+  i : INTEGER:= 0;
+  slength : INTEGER:= 0;
+  nspaces : INTEGER:= 0;
+  nwords : INTEGER:= 0;
+  nvowels : INTEGER:= 0;
+  sentence : STRING;
+BEGIN
+
+WHILE (sentence[i] NOT '.') DO
+ SWITCH (sentence[i]) DO
+   case 'a' : nvowels:= nvowels +1; BREAK;
+   case 'e' : nvowels:= nvowels +1; BREAK;
+   case 'i' : nvowels:= nvowels +1; BREAK;
+   case 'o' : nvowels:= nvowels +1; BREAK;
+   case 'u' : nvowels:= nvowels +1; BREAK;
+   case 'y' : nvowels:= nvowels +1; BREAK;
+   case ' ' : nspaces:= nspaces +1; BREAK;
+ END_SWITCH
+ i:= i+1;
+ 
+END_WHILE
+ slength:= i +1;
+ nwords:= nspaces + 1;
+
+ Write(slength);
+ Write(nwords);
+ Write(nvowels);
+END
+
